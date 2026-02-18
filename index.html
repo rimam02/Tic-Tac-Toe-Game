@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="start-screen" class="screen active">
+    <h1>Tic Tac Toe</h1>
+    <button onclick="startGame()">Start Game</button>
+</section>
+
+
+<section id="game-screen" class="screen">
+
+    <header class="header">
+
+        <div class="turn">
+            Turn: <span id="player-turn">X</span>
+        </div>
+
+        <div class="score">
+            X: <span id="x-score">0</span> |
+            O: <span id="o-score">0</span>
+        </div>
+
+        <button onclick="restartGame()">Restart</button>
+
+    </header>
+
+    <main class="board">
+
+        <div class="cell" onclick="makeMove(this,0)"></div>
+        <div class="cell" onclick="makeMove(this,1)"></div>
+        <div class="cell" onclick="makeMove(this,2)"></div>
+        <div class="cell" onclick="makeMove(this,3)"></div>
+        <div class="cell" onclick="makeMove(this,4)"></div>
+        <div class="cell" onclick="makeMove(this,5)"></div>
+        <div class="cell" onclick="makeMove(this,6)"></div>
+        <div class="cell" onclick="makeMove(this,7)"></div>
+        <div class="cell" onclick="makeMove(this,8)"></div>
+
+    </main>
+
+</section>
+
+<section id="game-over-screen" class="screen">
+    <h1 id="winner-text"></h1>
+    <button onclick="playAgain()">Play Again</button>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
